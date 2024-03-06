@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "dae1e4b7-62e4-45ec-bea8-eb21920e6a5c",
+		"name": "ai_estimator_backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30663573"
+	},
+	"item": [
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Get Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}orders?limit=2&offset=0",
+							"host": [
+								"{{URL}}orders"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Orders IDs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}orders/ids?limit=2&offset=0",
+							"host": [
+								"{{URL}}orders"
+							],
+							"path": [
+								"ids"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}orders/54bd396c7c84c9966de7b38f",
+							"host": [
+								"{{URL}}orders"
+							],
+							"path": [
+								"54bd396c7c84c9966de7b38f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Orders by User ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}orders/by_user_id/5f981334c1071a33eb021d40",
+							"host": [
+								"{{URL}}orders"
+							],
+							"path": [
+								"by_user_id",
+								"5f981334c1071a33eb021d40"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order Rooms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}orders/54bf680e7c843f2bee34ab1f/rooms",
+							"host": [
+								"{{URL}}orders"
+							],
+							"path": [
+								"54bf680e7c843f2bee34ab1f",
+								"rooms"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://91.210.168.40:8000/",
+			"type": "string"
+		}
+	]
+}
